@@ -1,0 +1,35 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="card">
+        <div class="card-header bg-warning text-white text-center">
+          <p class="h4">Client Component</p>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control text-warning"
+              placeholder="Enter input value in client side"
+              #inputRef
+            />
+            <input
+              type="button"
+              class="btn btn-warning m-3 text-white"
+              value="send-server"
+              (click)="getData(inputRef.value)"
+              (click)="inputRef.value = ''"
+            />
+          </div>
+        </div>
+        <div class="card-footer bg-warning text-white">
+          <div class="h5 text-danger">
+            <span class="text-white">Server Data:</span>&nbsp;&nbsp;&nbsp;{{
+              serverRef
+            }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
